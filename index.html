@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <!-- ＃リンクのスムーズスクロール -->
+    <script>
+        $(function(){
+          // #で始まるリンクをクリックしたら実行されます
+          $('a[href^="#"]').click(function() {
+            // スクロールの速度
+            var speed = 1000; // ミリ秒で記述
+            var href= $(this).attr("href");
+            var target = $(href == "#" || href == "" ? 'html' : href);
+            var position = target.offset().top;
+            $('body,html').animate({scrollTop:position}, speed, 'swing');
+            return false;
+          });
+        });
+      </script>
+    <title>Document</title>
+    
+</head>
+<body>
+    <!--header-->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="LanihairsLogo.png" alt="logo">
+            </div>
+            <div class="nav">
+                <a href="#intro">ホーム</a>
+                <a href="#profile">オーナー</a>
+                <a href="#price">料金</a>
+                <a href="#reservation">予約</a>
+                <a href="#accesse">アクセス</a>
+                <a href="#news">お知らせ</a>
+
+            </div>
+            
+        </div>
+        <div class="news-bar">
+            <div class="a"><div class="b"><div class="c"><div class="d"></div></div></div></div>
+        </div>
+    </header>
+    
+    
+
+    <!--intro-->
+    <div id="intro" class="intro">
+        <div class="container">
+            <div class="gradation-h">
+                <div class="sentence">
+                    <div class="box">
+                        <h2>みんなの街の理髪店</h2>
+                        <p>場所は4号沿い、わたり病院前<br>
+                        ブラウンとホワイト、アクセントに虹色のハワイアンな看板を掲げる小さな町の理髪店。
+                        店内にはアロハな音楽が流れ、観葉植物の緑と大きな窓の採光が訪れる人をリラックスさせてくれる。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--profile-->
+    <div id="profile" class="profile">
+        <div class="container">
+            <div class="owner-pic">
+                <div class="box">
+                    <img src="オーナー.png" alt="オーナーの写真">
+                </div>
+            </div>
+            <div class="owner-profile">
+                <div class="box">
+                    <div class="title">
+                        <h2>オーナー</h2>
+                        <p>Owner</p>
+                    </div>
+                    <p>オーナーの尾崎です。
+                        趣味はたくさんあって、夏になると猪苗代でジェットスキーやフィシングバス釣り、海では海釣りフグ、スキューバーダイビングをしたりしています！
+                    Lani hair'sのLaniは天国という意味があって、お客さんに天国にいるような気持ちになってほしくてこの名前をつけました！</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--price-->
+    <div id="price" class="price">
+        <div class="container">
+            <div class="left">
+                <div class="box">
+                    <div class="title">
+                        <h2>料金</h2>
+                    </div>
+                    <p>Price</p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="box">
+                    <dl>
+                        <dt>カット大人</dt>
+                        <dd>3000円</dd>
+                        <dt>カット子供 (中学生まで)</dt>
+                        <dd>2500円</dd>
+                        <dt>シャンプー</dt>
+                        <dd>500円</dd>
+                        <dt>ひげ剃り</dt>
+                        <dd>300円</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--reservation-->
+    <div id="reservation" class="reservation">
+        <div class="container">
+            <div class="left">
+                <div class="box">
+                    <div class="title">
+                        <h2>予約</h2>
+                        <p>Resaervation</p>
+                    </div>
+                        <dl>
+                            <dt>Tell</dt>
+                            <dd>024-1234-5678</dd>
+                            <dt>Email</dt>
+                            <dd ><button  class="btn-square" onclick="copyToClipboard()"><input id="copyTarget" type="text" value="lanihairs@gmail.com" readonly></button></dd>
+                        </dl>
+                </div>
+            </div>
+            <div class="right">
+                <div class="box">
+                    <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FBudapest&amp;src=am9saGVseTFAZ21haWwuY29t&amp;src=amEuaHVuZ2FyaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23039BE5&amp;color=%230B8043&amp;showTitle=0&amp;showNav=1&amp;showDate=1&amp;showPrint=0&amp;showTabs=0&amp;showTz=0&amp;showCalendars=0" style="border-width:0" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--accesse-->
+    <div id="accesse" class="access">
+        <div class="container">
+            <div class="left">
+                <div class="box">
+                    <div class="title">
+                        <h2>アクセス</h2>
+                        <p>Access</p>
+                    </div>
+                    <p class="address">福島県福島市渡利番匠町３－１<br>
+                        わたり病院前
+                    </p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="box">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3154.8095248735954!2d140.47964131531685!3d37.747612579764485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8a843089f001eb%3A0x2b8ad18ae7e8e5d!2z5pel5pys44CB44CSOTYwLTgxNDEg56aP5bO255yM56aP5bO25biC5rih5Yip55Wq5Yyg55S677yT4oiS77yR!5e0!3m2!1sja!2shu!4v1589618425148!5m2!1sja!2shu" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="news" class="news">
+        <div class="container">
+            <div class="left">
+                <div class="box">
+                    <h2>お知らせ</h2>
+                    <p>News</p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="box">
+                    <dl>
+                        <dt>2020/05/19</dt>
+                        <dd>7月15日～20日まで夏季休業とさせていただきます。</dd>
+                        <dt></dt>
+                        <dd></dd>
+                        <dt></dt>
+                        <dd></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--footer-->
+    <footer>
+        <div class="container">
+            All Right Reserve
+        </div>
+    </footer>
+
+    <script>
+        function copyToClipboard() {
+            // コピー対象をJavaScript上で変数として定義する
+            var copyTarget = document.getElementById("copyTarget");
+
+            // コピー対象のテキストを選択する
+            copyTarget.select();
+
+            // 選択しているテキストをクリップボードにコピーする
+            document.execCommand("Copy");
+
+            // コピーをお知らせする
+            alert("コピーできました！ : " + copyTarget.value);
+        }
+    </script>
+</body>
+</html>
